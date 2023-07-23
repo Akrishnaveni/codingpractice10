@@ -27,7 +27,7 @@ intializeDbandServer();
 const mySecretToken =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjkwMDA5OTE4fQ.aSRABmvktCwSSui4_NY45CLmnRY1wX7x5_1irPqx4zc";
 const authenticateToken = (request, response, next) => {
-  const authHeader = request.headers["autherization"];
+  const authHeader = request.headers["authorization"];
   let jwtToken;
   if (authHeader !== undefined) {
     jwtToken = authHeader.split(" ")[1];
